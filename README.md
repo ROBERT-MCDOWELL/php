@@ -5,7 +5,7 @@ it will work smoothly on the modern OS with
 openssl-1.1.x as default SSL libraries.
 
 php-4.4.9 has been optimized for performance and compilation error free and surprisingly
-comparable to php7/8. security bugs have been fixed also.
+comparable to php8. security bugs have been fixed also.
 
 Please look at config.status (php4) and config.log (php5) to have an idea of how to compile php4/5 in FPM mode.
 
