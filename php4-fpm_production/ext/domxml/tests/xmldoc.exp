@@ -1,0 +1,20 @@
+object(domdocument)(9) {
+  ["name"]=>
+  string(9) "#document"
+  ["url"]=>
+  string(0) ""
+  ["version"]=>
+  string(3) "1.0"
+  ["standalone"]=>
+  int(1)
+  ["type"]=>
+  int(9)
+  ["compression"]=>
+  int(-1)
+  ["charset"]=>
+  int(1)
+  [0]=>
+  int(5)
+  [1]=>
+  int(%d)
+}

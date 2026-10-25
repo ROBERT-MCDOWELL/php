@@ -1,0 +1,40 @@
+
+---- EXPECTED OUTPUT
+Notice: Undefined variable:  obj in %s on line %d
+
+Warning: register_shutdown_function() [/phpmanual/function.register-shutdown-function.html]: Invalid shutdown callback 'Array' passed in %s on line %d
+
+Notice: Undefined variable:  obj in %s on line %d
+
+Warning: register_shutdown_function() [/phpmanual/function.register-shutdown-function.html]: Invalid shutdown callback 'Array' passed in %s on line %d
+
+Warning: register_shutdown_function() [/phpmanual/function.register-shutdown-function.html]: Invalid shutdown callback 'Array' passed in %s on line %d
+
+Warning: register_shutdown_function() [/phpmanual/function.register-shutdown-function.html]: Invalid shutdown callback 'Array' passed in %s on line %d
+
+Warning: (Registered shutdown functions) Unable to call bar::foo() - function does not exist in Unknown on line 0
+
+Warning: (Registered shutdown functions) Unable to call bar() - function does not exist in Unknown on line 0
+joo!
+bar!
+
+Warning: (Registered shutdown functions) Unable to call bar::foobar() - function does not exist in Unknown on line 0
+bar!
+---- ACTUAL OUTPUT
+Notice: Undefined variable:  obj in /home/src/php-4.4.9_suhosin_openssl-1.1.x/ext/standard/tests/general_functions/bug32647.php on line 15
+
+Warning: register_shutdown_function() [/phpmanual/function.register-shutdown-function.html]: Invalid shutdown callback 'Array' passed in /home/src/php-4.4.9_suhosin_openssl-1.1.x/ext/standard/tests/general_functions/bug32647.php on line 15
+
+Notice: Undefined variable:  obj in /home/src/php-4.4.9_suhosin_openssl-1.1.x/ext/standard/tests/general_functions/bug32647.php on line 16
+
+Warning: register_shutdown_function() [/phpmanual/function.register-shutdown-function.html]: Invalid shutdown callback 'Array' passed in /home/src/php-4.4.9_suhosin_openssl-1.1.x/ext/standard/tests/general_functions/bug32647.php on line 16
+
+Warning: (Registered shutdown functions) Unable to call bar::foo() - function does not exist in Unknown on line 0
+
+Warning: (Registered shutdown functions) Unable to call bar() - function does not exist in Unknown on line 0
+joo!
+bar!
+
+Warning: (Registered shutdown functions) Unable to call bar::foobar() - function does not exist in Unknown on line 0
+bar!
+---- FAILED

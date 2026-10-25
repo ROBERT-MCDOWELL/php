@@ -1,0 +1,6 @@
+Warning: domxml_new_doc() [/phpmanual/function.domxml-new-doc.html]: Unsupported node type: 0
+ in /home/src/php-4.4.9_suhosin_openssl-1.1.x/ext/domxml/tests/bug23326.php on line 2
+
+Warning: domxml_new_doc() [/phpmanual/function.domxml-new-doc.html]: Cannot create required DOM object in /home/src/php-4.4.9_suhosin_openssl-1.1.x/ext/domxml/tests/bug23326.php on line 2
+
+Fatal error: Call to a member function on a non-object in /home/src/php-4.4.9_suhosin_openssl-1.1.x/ext/domxml/tests/bug23326.php on line 3

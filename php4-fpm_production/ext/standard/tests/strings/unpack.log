@@ -1,0 +1,10 @@
+
+---- EXPECTED OUTPUT
+Warning: unpack(): Invalid format type - in %s/unpack.php on line %d
+bool(false)
+Done
+---- ACTUAL OUTPUT
+Warning: unpack() [/phpmanual/function.unpack.html]: Invalid format type - in /home/src/php-4.4.9_suhosin_openssl-1.1.x/ext/standard/tests/strings/unpack.php on line 2
+bool(false)
+Done
+---- FAILED

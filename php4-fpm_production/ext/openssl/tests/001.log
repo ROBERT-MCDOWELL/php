@@ -1,0 +1,11 @@
+
+---- EXPECTED OUTPUT
+Creating private key
+Export key to file
+Load key from file - array syntax
+Load key using direct syntax
+Load key manually and use string syntax
+OK!
+---- ACTUAL OUTPUT
+Creating private key
+---- FAILED

@@ -1,0 +1,4 @@
+Warning: domxml_open_mem() [/phpmanual/function.domxml-open-mem.html]: Unsupported node type: 0
+ in /home/src/php-4.4.9_suhosin_openssl-1.1.x/ext/domxml/tests/bug26384.php on line 2
+
+Warning: domxml_open_mem() [/phpmanual/function.domxml-open-mem.html]: Cannot create required DOM object in /home/src/php-4.4.9_suhosin_openssl-1.1.x/ext/domxml/tests/bug26384.php on line 2

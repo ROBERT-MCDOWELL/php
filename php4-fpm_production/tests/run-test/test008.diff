@@ -1,0 +1,15 @@
+001- %s: %sivision by zero in %s on line %d
+001+ string(1) "1"
+002- string(1) "1"
+002+ string(4) "2047"
+003- string(4) "2047"
+003+ string(1) "0"
+004- string(1) "0"
+004+ string(1) "1"
+005- string(1) "1"
+005+ string(1) "0"
+006- string(1) "0"
+006+ NULL
+007- string(%d) "%sivision by zer%s"
+007+ string(16) "Division by zero"
+008- string(%d) "%sivision by zer%s"

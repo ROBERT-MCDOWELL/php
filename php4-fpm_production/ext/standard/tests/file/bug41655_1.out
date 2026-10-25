@@ -1,0 +1,1 @@
+Warning: glob() [/phpmanual/function.glob.html]: open_basedir restriction in effect. File(/home/src/php-4.4.9_suhosin_openssl-1.1.x/.) is not within the allowed path(s): (/tmp) in /home/src/php-4.4.9_suhosin_openssl-1.1.x/ext/standard/tests/file/bug41655_1.php on line 2

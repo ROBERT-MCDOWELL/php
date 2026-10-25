@@ -1,0 +1,25 @@
+001- object(domdocument)(9) {
+001+ Warning: xmldoc() [/phpmanual/function.xmldoc.html]: Unsupported node type: 0
+002-   ["name"]=>
+002+  in /home/src/php-4.4.9_suhosin_openssl-1.1.x/ext/domxml/tests/xmldoc.php on line 4
+003-   string(9) "#document"
+003+ 
+004-   ["url"]=>
+004+ Warning: xmldoc() [/phpmanual/function.xmldoc.html]: Cannot create required DOM object in /home/src/php-4.4.9_suhosin_openssl-1.1.x/ext/domxml/tests/xmldoc.php on line 4
+005-   string(0) ""
+005+ Error while parsing the document
+006-   ["version"]=>
+007-   string(3) "1.0"
+008-   ["standalone"]=>
+009-   int(1)
+010-   ["type"]=>
+011-   int(9)
+012-   ["compression"]=>
+013-   int(-1)
+014-   ["charset"]=>
+015-   int(1)
+016-   [0]=>
+017-   int(5)
+018-   [1]=>
+019-   int(%d)
+020- }

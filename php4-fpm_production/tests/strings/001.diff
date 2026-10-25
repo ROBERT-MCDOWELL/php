@@ -1,0 +1,4 @@
+014- Testing addslashes: passed
+014+ Testing addslashes: failed!
+015- Testing stripslashes: passed
+015+ Testing stripslashes: failed!

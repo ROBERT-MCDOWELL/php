@@ -1,0 +1,5 @@
+Warning: xmldoc() [/phpmanual/function.xmldoc.html]: Unsupported node type: 0
+ in /home/src/php-4.4.9_suhosin_openssl-1.1.x/ext/domxml/tests/xmldoc.php on line 4
+
+Warning: xmldoc() [/phpmanual/function.xmldoc.html]: Cannot create required DOM object in /home/src/php-4.4.9_suhosin_openssl-1.1.x/ext/domxml/tests/xmldoc.php on line 4
+Error while parsing the document

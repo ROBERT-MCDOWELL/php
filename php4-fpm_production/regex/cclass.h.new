@@ -1,0 +1,31 @@
+/* character-class table */
+static struct cclass {
+	char *name;
+	char *chars;
+	char *multis;
+} cclasses[] = {
+	{(char *)"alnum",		(char *)"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",(char *)""},
+	{(char *)"alpha",	(char *)"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+					(char *)""},
+	{(char *)"blank",	(char *)" \t",		(char *)""},
+	{(char *)"cntrl",	"\007\b\t\n\v\f\r\1\2\3\4\5\6\16\17\20\21\22\23\24\
+\25\26\27\30\31\32\33\34\35\36\37\177(char *)",	""},
+	{(char *)"digit",	(char *)"0123456789",	(char *)""},
+	{(char *)"graph",	"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz\
+0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~",
+					(char *)""},
+	{(char *)"lower",	(char *)"abcdefghijklmnopqrstuvwxyz",
+					(char *)""},
+	{(char *)"print",	"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz\
+0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ ",
+					(char *)""},
+	{(char *)"punct",	(char *)"!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~",
+					(char *)""},
+	{(char *)"space",	(char *)"\t\n\v\f\r ",	(char *)""},
+	{(char *)"upper",	(char *)"ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+					(char *)""},
+	{(char *)"xdigit",	(char *)"0123456789ABCDEFabcdef",
+					(char *)""},
+	{NULL,		0,		""}
+};
+

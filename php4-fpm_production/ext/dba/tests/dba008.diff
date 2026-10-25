@@ -1,0 +1,6 @@
+001- database handler: %s
+001+ database handler: flatfile
+003- string(2) "\""
+003+ string(1) """
+005- string(1) """
+005+ string(2) "\""

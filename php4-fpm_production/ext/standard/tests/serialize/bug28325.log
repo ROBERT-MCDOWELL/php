@@ -1,0 +1,42 @@
+
+---- EXPECTED OUTPUT
+object(a)(1) {
+  ["b"]=>
+  object(b)(1) {
+    ["c"]=>
+    object(c)(1) {
+      ["d"]=>
+      object(a)(1) {
+        ["b"]=>
+        object(b)(1) {
+          ["c"]=>
+          object(c)(1) {
+            ["d"]=>
+            NULL
+          }
+        }
+      }
+    }
+  }
+}
+---- ACTUAL OUTPUT
+object(a)(1) {
+  ["b"]=>
+  object(b)(1) {
+    ["c"]=>
+    object(c)(1) {
+      ["d"]=>
+      object(a)(1) {
+        ["b"]=>
+        object(b)(1) {
+          ["c"]=>
+          object(c)(1) {
+            ["d"]=>
+            *RECURSION*
+          }
+        }
+      }
+    }
+  }
+}
+---- FAILED

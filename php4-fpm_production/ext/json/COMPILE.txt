@@ -1,0 +1,4 @@
+./configure --with-php-config=/usr/local/php4/bin/php-config
+make clean
+make
+cp modules/json.so /usr/local/php4/lib/php/extensions/no-debug-zts-20020429/

@@ -1,0 +1,6 @@
+#! /bin/sh
+#
+# Created by configure
+
+'/usr/local/php4/lib/php/hash-1.5/configure' \
+"$@"

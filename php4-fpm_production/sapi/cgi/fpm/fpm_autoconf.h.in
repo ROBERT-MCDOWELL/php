@@ -1,0 +1,9 @@
+
+	/* $Id: fpm_autoconf.h.in,v 1.3 2008/05/24 17:38:47 anight Exp $ */
+	/* (c) 2007,2008 Andrei Nigmatulin */
+
+#define PHP_FPM_VERSION   "@FPM_VERSION@"
+#define PHP_FPM_CONF_PATH "@php_fpm_conf_path@"
+#define PHP_FPM_LOG_PATH  "@php_fpm_log_path@"
+#define PHP_FPM_PID_PATH  "@php_fpm_pid_path@"
+

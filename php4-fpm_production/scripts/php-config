@@ -1,0 +1,29 @@
+#! /bin/sh
+
+prefix="/usr/local/php4"
+version="4.4.9"
+includedir="${prefix}/include/php"
+includes="-I$includedir -I$includedir/main -I$includedir/TSRM -I$includedir/Zend"
+ldflags=" -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/local/lib -L/usr/local/pgsql/lib"
+libs="-lssl -lcrypto -lcrypt -lresolv  -lnsl -lexpat -lcrypt -lpq -lpdf -lz -ltiff -lpng -ljpeg -lmhash -lmcrypt -lltdl -lfreetype -lpng -lz -ljpeg -lcurl -lbz2 -lz -lpcre -lm  -lgcc -lcrypt "
+extension_dir='/usr/local/php4/lib/php/extensions/no-debug-zts-20020429'
+
+case "$1" in
+--prefix)
+	echo $prefix;;
+--includes)
+	echo $includes;;
+--ldflags)
+	echo $ldflags;;
+--libs)
+	echo $libs;;
+--extension-dir)
+	echo $extension_dir;;
+--version)
+	echo $version;;
+*)
+	echo "Usage: $0 [--prefix|--includes|--ldflags|--libs|--extension-dir|--version]"
+	exit 1;;
+esac
+
+exit 0

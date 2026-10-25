@@ -1,0 +1,14 @@
+utf8_to_utf16.lo: /home/src/php4-fpm_production/ext/json/utf8_to_utf16.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/src/php4-fpm_production/ext/json $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/src/php4-fpm_production/ext/json/utf8_to_utf16.c -o utf8_to_utf16.lo 
+utf8_decode.lo: /home/src/php4-fpm_production/ext/json/utf8_decode.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/src/php4-fpm_production/ext/json $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/src/php4-fpm_production/ext/json/utf8_decode.c -o utf8_decode.lo 
+JSON_parser.lo: /home/src/php4-fpm_production/ext/json/JSON_parser.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/src/php4-fpm_production/ext/json $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/src/php4-fpm_production/ext/json/JSON_parser.c -o JSON_parser.lo 
+$(phplibdir)/json.la: ./json.la
+	$(LIBTOOL) --mode=install cp ./json.la $(phplibdir)
+
+./json.la: $(shared_objects_json) $(JSON_SHARED_DEPENDENCIES)
+	$(LIBTOOL) --mode=link $(CC) $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) $(LDFLAGS) -o $@ -export-dynamic -avoid-version -prefer-pic -module -rpath $(phplibdir) $(EXTRA_LDFLAGS) $(shared_objects_json) $(JSON_SHARED_LIBADD)
+
+json.lo: /home/src/php4-fpm_production/ext/json/json.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/src/php4-fpm_production/ext/json $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/src/php4-fpm_production/ext/json/json.c -o json.lo 

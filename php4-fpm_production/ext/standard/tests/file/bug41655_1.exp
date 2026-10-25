@@ -1,0 +1,1 @@
+Warning: glob() [%s]: open_basedir restriction in effect. File(.) is not within the allowed path(s): (/tmp) in %s on line %d

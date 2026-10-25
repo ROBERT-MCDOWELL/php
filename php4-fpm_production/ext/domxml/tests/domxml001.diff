@@ -1,0 +1,180 @@
+002- --------- root
+002+ 
+003- Node Name: chapter
+003+ Warning: xmldoc() [/phpmanual/function.xmldoc.html]: Unsupported node type: 0
+004- Node Type: 1
+004+  in /home/src/php-4.4.9_suhosin_openssl-1.1.x/ext/domxml/tests/domxml001.php on line 5
+005- Num Children: 4
+005+ 
+006- 
+006+ Warning: xmldoc() [/phpmanual/function.xmldoc.html]: Cannot create required DOM object in /home/src/php-4.4.9_suhosin_openssl-1.1.x/ext/domxml/tests/domxml001.php on line 5
+007- --------- children of root
+007+ Error while parsing the document
+008- Node Name: title
+009- Node Type: 1
+010- Num Children: 1
+011- Node Content: Title
+012- 
+013- Node Name: #text
+014- Node Type: 3
+015- Num Children: 0
+016- Node Content: 
+017- 
+018- 
+019- Node Name: para
+020- Node Type: 1
+021- Num Children: 7
+022- 
+023- Node Name: #text
+024- Node Type: 3
+025- Num Children: 0
+026- Node Content: 
+027- 
+028- 
+029- --------- last
+030- Node Name: #text
+031- Node Type: 3
+032- Num Children: 0
+033- Node Content: 
+034- 
+035- 
+036- --------- parent
+037- Node Name: chapter
+038- Node Type: 1
+039- Num Children: 4
+040- 
+041- --------- children of parent
+042- Node Name: title
+043- Node Type: 1
+044- Num Children: 1
+045- Node Content: Title
+046- 
+047- Node Name: #text
+048- Node Type: 3
+049- Num Children: 0
+050- Node Content: 
+051- 
+052- 
+053- Node Name: para
+054- Node Type: 1
+055- Num Children: 7
+056- 
+057- Node Name: #text
+058- Node Type: 3
+059- Num Children: 0
+060- Node Content: 
+061- 
+062- 
+063- --------- creating a new attribute
+064- picture.gif
+065- --------- Get Attribute Node
+066- Node Name: src
+067- Node Type: 2
+068- Num Children: 1
+069- Node Content: picture.gif
+070- 
+071- --------- Remove Attribute Node
+072- Removed 1 attributes.
+073- --------- attributes of rootnode
+074- Node Name: language
+075- Node Type: 2
+076- Num Children: 1
+077- Node Content: en
+078- 
+079- --------- children of an attribute
+080- Node Name: #text
+081- Node Type: 3
+082- Num Children: 0
+083- Node Content: en
+084- 
+085- --------- Add child to root
+086- Node Name: Silly
+087- Node Type: 1
+088- Num Children: 1
+089- Node Content: Symphony
+090- 
+091- <?xml version="1.0" standalone="yes"?>
+092- <!DOCTYPE chapter SYSTEM "/share/sgml/Norman_Walsh/db3xml10/db3xml10.dtd" [
+093- <!ENTITY sp "spanish">
+094- ]>
+095- <!-- lsfj  -->
+096- <chapter language="en"><title language="en">Title</title>
+097- <para language="ge">
+098- &sp;
+099- <!-- comment -->
+100- <informaltable language="&sp;kkk">
+101- <tgroup cols="3">
+102- <tbody>
+103- <row><entry>a1</entry><entry morerows="1">b1</entry><entry>c1</entry></row>
+104- <row><entry>a2</entry><entry>c2</entry></row>
+105- <row><entry>a3</entry><entry>b3</entry><entry>c3</entry></row>
+106- </tbody>
+107- </tgroup>
+108- </informaltable>
+109- </para>
+110- <Silly>Symphony</Silly></chapter>
+111- 
+112- --------- Find element by tagname
+113-     Using dom
+114- Node Name: Silly
+115- Node Type: 1
+116- Num Children: 1
+117- Node Content: Symphony
+118- 
+119-     Using elem
+120- Node Name: Silly
+121- Node Type: 1
+122- Num Children: 1
+123- Node Content: Symphony
+124- 
+125- --------- Unlink Node
+126- Node Name: Silly
+127- Node Type: 1
+128- Num Children: 1
+129- Node Content: Symphony
+130- 
+131- Node Name: title
+132- Node Type: 1
+133- Num Children: 1
+134- Node Content: Title
+135- 
+136- Node Name: #text
+137- Node Type: 3
+138- Num Children: 0
+139- Node Content: 
+140- 
+141- 
+142- Node Name: para
+143- Node Type: 1
+144- Num Children: 7
+145- 
+146- Node Name: #text
+147- Node Type: 3
+148- Num Children: 0
+149- Node Content: 
+150- 
+151- 
+152- <?xml version="1.0" standalone="yes"?>
+153- <!DOCTYPE chapter SYSTEM "/share/sgml/Norman_Walsh/db3xml10/db3xml10.dtd" [
+154- <!ENTITY sp "spanish">
+155- ]>
+156- <!-- lsfj  -->
+157- <chapter language="en"><title language="en">Title</title>
+158- <para language="ge">
+159- &sp;
+160- <!-- comment -->
+161- <informaltable language="&sp;kkk">
+162- <tgroup cols="3">
+163- <tbody>
+164- <row><entry>a1</entry><entry morerows="1">b1</entry><entry>c1</entry></row>
+165- <row><entry>a2</entry><entry>c2</entry></row>
+166- <row><entry>a3</entry><entry>b3</entry><entry>c3</entry></row>
+167- </tbody>
+168- </tgroup>
+169- </informaltable>
+170- </para>
+171- </chapter>
+172- --------- Find element by id
+173- Not implemented
+174- --------- Check various node_name return values
+175- Not needed

@@ -1,0 +1,16 @@
+memcache.lo: /usr/local/php4/lib/php/memcache-2.2.7/memcache.c
+	$(LIBTOOL) --mode=compile $(CC) -I/usr/local/php4/include/php -I. -I/usr/local/php4/lib/php/memcache-2.2.7 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/php4/lib/php/memcache-2.2.7/memcache.c -o memcache.lo 
+memcache_queue.lo: /usr/local/php4/lib/php/memcache-2.2.7/memcache_queue.c
+	$(LIBTOOL) --mode=compile $(CC) -I/usr/local/php4/include/php -I. -I/usr/local/php4/lib/php/memcache-2.2.7 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/php4/lib/php/memcache-2.2.7/memcache_queue.c -o memcache_queue.lo 
+memcache_standard_hash.lo: /usr/local/php4/lib/php/memcache-2.2.7/memcache_standard_hash.c
+	$(LIBTOOL) --mode=compile $(CC) -I/usr/local/php4/include/php -I. -I/usr/local/php4/lib/php/memcache-2.2.7 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/php4/lib/php/memcache-2.2.7/memcache_standard_hash.c -o memcache_standard_hash.lo 
+memcache_consistent_hash.lo: /usr/local/php4/lib/php/memcache-2.2.7/memcache_consistent_hash.c
+	$(LIBTOOL) --mode=compile $(CC) -I/usr/local/php4/include/php -I. -I/usr/local/php4/lib/php/memcache-2.2.7 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/php4/lib/php/memcache-2.2.7/memcache_consistent_hash.c -o memcache_consistent_hash.lo 
+memcache_session.lo: /usr/local/php4/lib/php/memcache-2.2.7/memcache_session.c
+	$(LIBTOOL) --mode=compile $(CC) -I/usr/local/php4/include/php -I. -I/usr/local/php4/lib/php/memcache-2.2.7 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/php4/lib/php/memcache-2.2.7/memcache_session.c -o memcache_session.lo 
+$(phplibdir)/memcache.la: ./memcache.la
+	$(LIBTOOL) --mode=install cp ./memcache.la $(phplibdir)
+
+./memcache.la: $(shared_objects_memcache) $(MEMCACHE_SHARED_DEPENDENCIES)
+	$(LIBTOOL) --mode=link $(CC) $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) $(LDFLAGS) -o $@ -export-dynamic -avoid-version -prefer-pic -module -rpath $(phplibdir) $(EXTRA_LDFLAGS) $(shared_objects_memcache) $(MEMCACHE_SHARED_LIBADD)
+

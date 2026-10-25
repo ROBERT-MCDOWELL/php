@@ -1,0 +1,6 @@
+
+---- EXPECTED OUTPUT
+Warning: openssl_pkey_get_public() [/phpmanual/function.openssl-pkey-get-public.html]: Don't know how to get public key from this private key (the documentation lied) %s
+---- ACTUAL OUTPUT
+
+---- FAILED

@@ -1,0 +1,29 @@
+CONFIGURE:   './configure' '--prefix=/usr/local/php4' '--without-mysql' '--enable-fastcgi' '--enable-fpm' '--with-fpm-log=/var/log/php4/php-fpm.log' '--with-fpm-pid=/run/php4/php-fpm.pid' '--with-pear' '--with-openssl' '--with-curl' '--with-mod_charset' '--with-bz2' '--with-pgsql=/usr/local/pgsql' '--with-mcrypt' '--with-mhash' '--with-pdflib=/usr/local' '--with-iconv' '--with-gd' '--with-mime-magic' '--with-xmlrpc' '--with-jpeg-dir=/usr' '--with-png-dir=/usr' '--with-freetype-dir=/usr' '--with-tiff-dir=/usr' '--with-tsrm-pthreads' '--with-gnu-ld' '--with-zlib-dir' '--with-kerberos' '--with-pcre-regex=/usr' '--enable-track-vars' '--enable-exif' '--enable-dio' '--enable-mbstring' '--enable-bcmath' '--enable-calendar' '--enable-ftp' '--enable-shmop' '--enable-sockets' '--enable-inline-optimization' '--enable-zend-multibyte' '--enable-yp' '--enable-wddx' '--enable-dbx' '--enable-gd-jis-conv' '--enable-gd-native-ttf' '--enable-mbregex' '--enable-amf' '--enable-sysvsem' '--enable-sysvshm' '--enable-sysvmsg' '--enable-versioning' '--enable-pcntl' '--enable-zip' '--enable-experimental-zts' '--enable-libgcc'
+CC:         gcc
+CFLAGS:     -g -O2
+CPPFLAGS:    -D_REENTRANT
+CXX:        
+CXXFLAGS:   
+INCLUDES:    -I/usr/include/freetype2 -I/home/src/php4-fpm_production/ext/mbstring/mbregex -I/home/src/php4-fpm_production/ext/mbstring/libmbfl -I/home/src/php4-fpm_production/ext/mbstring/libmbfl/mbfl -I/usr/local/include -I/usr/local/pgsql/include
+LDFLAGS:     -Wl,-rpath,/usr/lib/gcc/x86_64-redhat-linux/14 -L/usr/lib/gcc/x86_64-redhat-linux/14 -Wl,-rpath,/usr/local/lib -L/usr/local/lib -Wl,-rpath,/usr/local/pgsql/lib -L/usr/local/pgsql/lib
+LIBS:       -lcrypt -lpq -lpdf -lz -ltiff -lpng -ljpeg -lmhash -lmcrypt -lltdl -lfreetype -lpng -lz -ljpeg -lcurl -lbz2 -lz -lpcre -lm  -lgcc -lcrypt
+DLIBS:      
+SAPI:       cgi
+PHP_RPATHS:  /usr/lib/gcc/x86_64-redhat-linux/14 /usr/local/lib /usr/local/pgsql/lib
+uname -a:   Linux node117 6.8.7-300.fc40.x86_64 #1 SMP PREEMPT_DYNAMIC Wed Apr 17 19:21:08 UTC 2024 x86_64 GNU/Linux
+
+gcc -o conftest -g -O2  -D_REENTRANT  -Wl,-rpath,/usr/lib/gcc/x86_64-redhat-linux/14 -L/usr/lib/gcc/x86_64-redhat-linux/14 -Wl,-rpath,/usr/local/lib -L/usr/local/lib -Wl,-rpath,/usr/local/pgsql/lib -L/usr/local/pgsql/lib conftest.c -lcrypt -lpq -lpdf -lz -ltiff -lpng -ljpeg -lmhash -lmcrypt -lltdl -lfreetype -lpng -lz -ljpeg -lcurl -lbz2 -lz -lpcre -lm  -lgcc -lcrypt 1>&5
+conftest.c:1:1: error: return type defaults to 'int' [-Wimplicit-int]
+    1 | main()
+      | ^~~~
+conftest.c: In function 'main':
+conftest.c:3:3: error: implicit declaration of function 'exit' [-Wimplicit-function-declaration]
+    3 |   exit(0);
+      |   ^~~~
+conftest.c:1:1: note: include '<stdlib.h>' or provide a declaration of 'exit'
+  +++ |+#include <stdlib.h>
+    1 | main()
+conftest.c:3:3: warning: incompatible implicit declaration of built-in function 'exit' [-Wbuiltin-declaration-mismatch]
+    3 |   exit(0);
+      |   ^~~~
+conftest.c:3:3: note: include '<stdlib.h>' or provide a declaration of 'exit'

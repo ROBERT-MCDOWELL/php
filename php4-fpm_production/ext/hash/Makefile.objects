@@ -1,0 +1,28 @@
+hash.lo: /home/src/php4-fpm_production/ext/hash/hash.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/src/php4-fpm_production/ext/hash $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/src/php4-fpm_production/ext/hash/hash.c -o hash.lo 
+hash_md.lo: /home/src/php4-fpm_production/ext/hash/hash_md.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/src/php4-fpm_production/ext/hash $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/src/php4-fpm_production/ext/hash/hash_md.c -o hash_md.lo 
+hash_sha.lo: /home/src/php4-fpm_production/ext/hash/hash_sha.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/src/php4-fpm_production/ext/hash $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/src/php4-fpm_production/ext/hash/hash_sha.c -o hash_sha.lo 
+hash_ripemd.lo: /home/src/php4-fpm_production/ext/hash/hash_ripemd.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/src/php4-fpm_production/ext/hash $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/src/php4-fpm_production/ext/hash/hash_ripemd.c -o hash_ripemd.lo 
+hash_haval.lo: /home/src/php4-fpm_production/ext/hash/hash_haval.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/src/php4-fpm_production/ext/hash $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/src/php4-fpm_production/ext/hash/hash_haval.c -o hash_haval.lo 
+hash_tiger.lo: /home/src/php4-fpm_production/ext/hash/hash_tiger.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/src/php4-fpm_production/ext/hash $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/src/php4-fpm_production/ext/hash/hash_tiger.c -o hash_tiger.lo 
+hash_gost.lo: /home/src/php4-fpm_production/ext/hash/hash_gost.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/src/php4-fpm_production/ext/hash $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/src/php4-fpm_production/ext/hash/hash_gost.c -o hash_gost.lo 
+hash_snefru.lo: /home/src/php4-fpm_production/ext/hash/hash_snefru.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/src/php4-fpm_production/ext/hash $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/src/php4-fpm_production/ext/hash/hash_snefru.c -o hash_snefru.lo 
+hash_whirlpool.lo: /home/src/php4-fpm_production/ext/hash/hash_whirlpool.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/src/php4-fpm_production/ext/hash $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/src/php4-fpm_production/ext/hash/hash_whirlpool.c -o hash_whirlpool.lo 
+hash_adler32.lo: /home/src/php4-fpm_production/ext/hash/hash_adler32.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/src/php4-fpm_production/ext/hash $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/src/php4-fpm_production/ext/hash/hash_adler32.c -o hash_adler32.lo 
+hash_crc32.lo: /home/src/php4-fpm_production/ext/hash/hash_crc32.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/src/php4-fpm_production/ext/hash $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/src/php4-fpm_production/ext/hash/hash_crc32.c -o hash_crc32.lo 
+$(phplibdir)/hash.la: ./hash.la
+	$(LIBTOOL) --mode=install cp ./hash.la $(phplibdir)
+
+./hash.la: $(shared_objects_hash) $(HASH_SHARED_DEPENDENCIES)
+	$(LIBTOOL) --mode=link $(CC) $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) $(LDFLAGS) -o $@ -export-dynamic -avoid-version -prefer-pic -module -rpath $(phplibdir) $(EXTRA_LDFLAGS) $(shared_objects_hash) $(HASH_SHARED_LIBADD)
+

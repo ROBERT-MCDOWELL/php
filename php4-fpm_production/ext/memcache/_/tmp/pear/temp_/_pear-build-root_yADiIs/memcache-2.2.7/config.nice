@@ -1,0 +1,7 @@
+#! /bin/sh
+#
+# Created by configure
+
+'/usr/local/php4/lib/php/memcache-2.2.7/configure' \
+'--enable-memcache-session=yes' \
+"$@"

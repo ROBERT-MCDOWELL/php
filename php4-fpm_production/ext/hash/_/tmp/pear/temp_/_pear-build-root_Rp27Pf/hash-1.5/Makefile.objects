@@ -1,0 +1,28 @@
+hash.lo: /usr/local/php4/lib/php/hash-1.5/hash.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/usr/local/php4/lib/php/hash-1.5 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/php4/lib/php/hash-1.5/hash.c -o hash.lo 
+hash_md.lo: /usr/local/php4/lib/php/hash-1.5/hash_md.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/usr/local/php4/lib/php/hash-1.5 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/php4/lib/php/hash-1.5/hash_md.c -o hash_md.lo 
+hash_sha.lo: /usr/local/php4/lib/php/hash-1.5/hash_sha.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/usr/local/php4/lib/php/hash-1.5 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/php4/lib/php/hash-1.5/hash_sha.c -o hash_sha.lo 
+hash_ripemd.lo: /usr/local/php4/lib/php/hash-1.5/hash_ripemd.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/usr/local/php4/lib/php/hash-1.5 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/php4/lib/php/hash-1.5/hash_ripemd.c -o hash_ripemd.lo 
+hash_haval.lo: /usr/local/php4/lib/php/hash-1.5/hash_haval.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/usr/local/php4/lib/php/hash-1.5 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/php4/lib/php/hash-1.5/hash_haval.c -o hash_haval.lo 
+hash_tiger.lo: /usr/local/php4/lib/php/hash-1.5/hash_tiger.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/usr/local/php4/lib/php/hash-1.5 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/php4/lib/php/hash-1.5/hash_tiger.c -o hash_tiger.lo 
+hash_gost.lo: /usr/local/php4/lib/php/hash-1.5/hash_gost.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/usr/local/php4/lib/php/hash-1.5 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/php4/lib/php/hash-1.5/hash_gost.c -o hash_gost.lo 
+hash_snefru.lo: /usr/local/php4/lib/php/hash-1.5/hash_snefru.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/usr/local/php4/lib/php/hash-1.5 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/php4/lib/php/hash-1.5/hash_snefru.c -o hash_snefru.lo 
+hash_whirlpool.lo: /usr/local/php4/lib/php/hash-1.5/hash_whirlpool.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/usr/local/php4/lib/php/hash-1.5 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/php4/lib/php/hash-1.5/hash_whirlpool.c -o hash_whirlpool.lo 
+hash_adler32.lo: /usr/local/php4/lib/php/hash-1.5/hash_adler32.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/usr/local/php4/lib/php/hash-1.5 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/php4/lib/php/hash-1.5/hash_adler32.c -o hash_adler32.lo 
+hash_crc32.lo: /usr/local/php4/lib/php/hash-1.5/hash_crc32.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/usr/local/php4/lib/php/hash-1.5 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/php4/lib/php/hash-1.5/hash_crc32.c -o hash_crc32.lo 
+$(phplibdir)/hash.la: ./hash.la
+	$(LIBTOOL) --mode=install cp ./hash.la $(phplibdir)
+
+./hash.la: $(shared_objects_hash) $(HASH_SHARED_DEPENDENCIES)
+	$(LIBTOOL) --mode=link $(CC) $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) $(LDFLAGS) -o $@ -export-dynamic -avoid-version -prefer-pic -module -rpath $(phplibdir) $(EXTRA_LDFLAGS) $(shared_objects_hash) $(HASH_SHARED_LIBADD)
+
